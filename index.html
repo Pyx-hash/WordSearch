@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search</title>
+    <link rel="stylesheet" href="css/wordsearch.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="wordsearchlogic.js"></script>
+    <script src="wordsearchview.js"></script>
+    <script src="wordpaths.js"></script>
+    <script src="wordsearchcontroller.js"></script>
+</head>
+<body>
+     <h1>Word Search</h1>
+     <h2 id="instructions"></h2>
+     <h3 id="themeIntro">The Theme is:</h3>
+     <span id="wordTheme"></span>
+
+     <button id="newGameButton" type="button">New Game</button>
+     <div id="wordboard"></div>
+     <div id="wordlist"></div>
+     <button id="solveButton" type="button">Release the sacred answers!</button>
+</body>
+<script>
+    $(document).ready(function () {
+        new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton", "#instructions", "#wordTheme");
+    })
+</script>
+</html>
